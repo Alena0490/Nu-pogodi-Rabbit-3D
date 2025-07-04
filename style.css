@@ -1,0 +1,177 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.container {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Nu pogodi***/
+
+.card-wrap {
+    width: 45rem;
+    height: 25rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0rem;
+    background: url(img/Nu-Pogodi-screen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s linear;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.517);
+}
+
+.card-wrap:hover .card {
+    transform: perspective(15px) rotateX(3deg) translateY(-120px);
+    filter: brightness(0.3) saturate(0.7);
+}
+
+.object {
+    width: 20rem;
+    height: 14.5rem;
+    position: absolute;
+    bottom: 3rem;
+    background-image: url(img/rabbit.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: all 1s linear;
+    animation: animate 0.5s linear infinite alternate;
+    animation-play-state: paused !important;
+    opacity: 0;
+}
+
+.card-wrap:hover .object {
+    animation-play-state: running !important;
+    transform: translateY(-13rem) translateX(14rem) scale(1);
+    -webkit-box-reflect: below 0
+    linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 40%);
+    filter: none;
+    opacity: 1;
+}
+
+.card-wrap:hover h2 {
+    display: block;
+}
+
+h2 {
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    display: none;
+    color: #00ff00;
+    text-shadow: 0 0 4px #00ff00;
+    animation: blink 0.3s infinite;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 58px;
+    text-align: center;
+    font-family: 'Open 24 Display St', sans-serif;
+    letter-spacing: 3px;
+}
+
+@keyframes animate {
+    0% {
+        background-image: url(img/rabbit.webp);
+    }
+    50% {
+        background-image: url(img/rabbit1.webp);
+        /* rotate: 7deg; */
+    }
+
+}
+
+
+@font-face {
+    font-family: 'Open 24 Display St';
+    src: url('digital.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.9;}
+    100% { opacity: 1; filter: brightness(1.2) }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/*Nautilus***/
+
+/* .map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0rem;
+    background: url(img/map.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 1s linear;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.517);
+}
+
+.map-wrap:hover .map {
+    transform: perspective(15px) rotateX(3deg) translateY(-120px);
+    filter: brightness(0.3) saturate(0.7);
+}
+
+.object-m {
+    width: 20rem;
+    height: 14.5rem;
+    position: absolute;
+    bottom: 3rem;
+    background-image: url(img/AdobeStock_640623094.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: all 1s linear;
+    animation: spin 0.5s linear infinite alternate;
+    animation-play-state: paused !important;
+    opacity: 0;
+}
+
+.map-wrap:hover .objec-m {
+    animation-play-state: running !important;
+    transform: translateY(-13rem) translateX(14rem) scale(1);
+    -webkit-box-reflect: below 0
+    linear-gradient(to top, rgba(0,0,0,0.35) 0%, transparent 40%);
+    filter: none;
+    opacity: 1;
+}
+
+@keyframes spin {
+    0% {
+        background-image: url(img/AdobeStock_640623094.png) !important;
+        rotate: 0deg;
+    }
+    50% {
+        background-image: url(img/AdobeStock_640623094.png) !important;
+        rotate: 7deg;
+    }
+
+} */
